@@ -1,17 +1,15 @@
-let a1 = [1,2,3];
+let a1 = [11,2,4];
 let a2 = [4,5,6];
-let a3 = [7,8,9];
+let a3 = [10,8,-12];
 
 let matrix = [a1,a2,a3]
 let m1 = 0;  
 let m2 = 0;
-for(let i = 0; i < matrix.length; i++){
-/* m1 += matrix[i][i] */
-/* m2 += martrix[i].length[-i]; */
-/* console.log(matrix[i][matrix[i].length-i]) */
-/* console.log(i) */
- console.log(matrix[matrix[i].length-i]); 
+let count = 0
+for(let i = 0; i < matrix.length; i++){ 
+ count += 1
+ m1 += matrix[i][i] 
+ m2 += matrix[i][ matrix[i].length - count ]
 }
 
-/* console.log(m1)
-console.log(m2) */
+console.log(Math.abs(m1-m2))
